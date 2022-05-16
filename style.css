@@ -1,5 +1,3 @@
-
-  
 h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
@@ -30,6 +28,10 @@ h3 {
     border-radius: 5%;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
     background-color: #4a4e66;
     font-family: 'Open Sans', sans-serif;
@@ -47,10 +49,6 @@ p {
 
 a {
     color: #6fa7a4;
-}
-
-a:hover {
-    opacity: 0.5;
 }
 
 div {
@@ -75,6 +73,10 @@ div {
   border-radius: 4px;
   line-height: 15px;
   box-shadow: 2px 3px 1px rgb(100 100 100 / 10%);
+}
+
+.btn-blue:hover{
+    background-color: #387e7a;
 }
 
 a:-webkit-any-link {
@@ -149,7 +151,7 @@ ul {
 }
 
 .webscreen:hover {
-  transform: translateY(-50px);
+  transform: translateY(-5px);
   filter: drop-shadow(-0.1vw 0.4vmin 5px black);
 }
 
@@ -179,6 +181,10 @@ img {
 
 .skills {
     margin: 1vh;
+}
+
+.sociallinks:hover {
+  color: #387471;
 }
 
 @keyframes mainText {
@@ -233,7 +239,21 @@ img {
 @media (max-width: 540px) {
   /* For a screen < 540px, this CSS will be read */
   .container {
-    width: 300px;
+    width: 450px;
+  }
+}
+
+@media (max-width: 475px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 350px;
+  }
+}
+
+@media (max-width: 375px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 250px;
   }
 }
 
