@@ -7,6 +7,12 @@ h1, h2, h3 {
   color: #246A73;
 }
 
+h1{
+  opacity: 0;
+  transform: translateY(5px);
+  animation: mainText 0.5s ease-in forwards 0.1s;
+}
+
 h2 {
     color: #d4ad95;
     font-size: 20px;
@@ -14,6 +20,14 @@ h2 {
     font-weight: 500;
     margin: 0px;
     padding: 0px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #efefef;
+    background-color: #161616;
+    padding: 10px;
+    border-radius: 5%;
 }
 
 body {
@@ -39,7 +53,6 @@ a:hover {
     opacity: 0.5;
 }
 
-
 div {
     display: block;
 }
@@ -54,13 +67,14 @@ div {
 }
 
 .btn-blue {
-    background-color: #7fcac6;
-    margin: 30px;
-    color: white;
-    padding: 10px 10px;
-    border-radius: 4px;
-    line-height: 15px;
-    box-shadow: 2px 3px 1px rgb(100 100 100 / 10%);
+  all: none;
+  background-color: #7fcac6;
+  margin: 30px;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 4px;
+  line-height: 15px;
+  box-shadow: 2px 3px 1px rgb(100 100 100 / 10%);
 }
 
 a:-webkit-any-link {
@@ -98,8 +112,83 @@ ul {
 
 .container {
     margin: 40px auto;
-    width: 700px;
+    width: 1000px;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.grid-item1 {
+    grid-column: 1/2;
+    opacity: 0;
+    transform: translateY(5px);
+    animation: mainText 0.5s ease-in forwards 1s;
+}
+
+.grid-item2 {
+    grid-column: 2/3;
+    opacity: 0;
+    transform: translateY(5px);
+    animation: mainText 0.5s ease-in forwards 1.5s;
+}
+
+
+.grid-item3 {
+    grid-column: 3/4;
+    opacity: 0;
+    transform: translateY(5px);
+    animation: mainText 0.5s ease-in forwards 2s;
+}
+
+.webscreen {
+  object-fit: contain;
+  filter: drop-shadow(-0vw 0vmin 0px black);
+  transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+}
+
+.webscreen:hover {
+  transform: translateY(-50px);
+  filter: drop-shadow(-0.1vw 0.4vmin 5px black);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+   }
+
+
+.skillboard1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(5px);
+    animation: mainText 1s ease-in forwards 0.5s;
+}
+
+.skillboard2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(5px);
+    animation: mainText 1s ease-in forwards 1s;
+}
+
+.skills {
+    margin: 1vh;
+}
+
+@keyframes mainText {
+  to {
+    transform: translateY(0px);
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 
 @media (max-width: 960px) {
     /* For a screen < 960px, this CSS will be read */
@@ -113,10 +202,38 @@ ul {
   .container {
     width: 500px;
   }
+  .skillboard1 {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .skillboard2 {
+    flex-direction: column;
+  }
+
+  .grid-container {
+    display: block;
+  }
+
+  .grid-item1 {
+    grid-row: 1/2;
 }
+
+  .grid-item2 {
+    grid-row: 2/3;
+  }
+
+
+  .grid-item3 {
+      grid-row: 3/4;
+  }
+
+}
+
 @media (max-width: 540px) {
   /* For a screen < 540px, this CSS will be read */
   .container {
     width: 300px;
   }
 }
+
